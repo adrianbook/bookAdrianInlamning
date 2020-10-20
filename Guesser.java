@@ -10,7 +10,7 @@ import java.io.Console;
 public class Guesser{
   private int low;
   private int high;
-
+  private Console cons;
   /*
    * Task 1. Write code here for a constructor
    * which takes two int arguments and saves
@@ -65,7 +65,18 @@ public class Guesser{
    * the player.
    */
   private String getReply(){
-    String reply = null;
+    while (true) {
+    String reply = cons.readLine();
+    if ("t".equals(reply.toLowerCase())) {
+      return reply;
+    }
+    else if ("f".equals(reply.toLowerCase())) {
+      return reply;
+    }
+    else {
+      System.out.println("Please answer T for true, and F for false.\n");
+    }
+    }
     // Write code here which reads a String from the console.
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
