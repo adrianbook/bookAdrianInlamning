@@ -1,5 +1,6 @@
 import java.io.Console;
 
+
 /**
  * Assignment 1 - Guessing Game
  * 
@@ -10,7 +11,7 @@ import java.io.Console;
 public class Guesser{
   private int low;
   private int high;
-  private Console cons;
+  public Console cons = System.console();
   /*
    * Task 1. Write code here for a constructor
    * which takes two int arguments and saves
@@ -67,10 +68,11 @@ public class Guesser{
   private String getReply(){
     while (true) {
     String reply = cons.readLine();
-    if ("t".equals(reply.toLowerCase())) {
+    reply = reply.toLowerCase();
+    if ("t".equals(reply)) {
       return reply;
     }
-    else if ("f".equals(reply.toLowerCase())) {
+    else if ("f".equals(reply)) {
       return reply;
     }
     else {
@@ -81,7 +83,6 @@ public class Guesser{
     // As long as it is not a valid reply (one of "T" and "F")
     // write an error message, and read a new reply.
     // When you have gotten a valid reply, return it.
-    return reply;
   }
 
   private void doGuesses(){
@@ -95,7 +96,7 @@ public class Guesser{
       System.out.println("Is the number less than or equal to " +
                          middle + "?");
       String reply = getReply();
-      if("T".equals(reply)){
+      if("t".equals(reply)){
         // The number is less than or equal to middle
         // so we move down high to middle
         high = middle;
