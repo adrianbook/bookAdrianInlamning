@@ -1,0 +1,17 @@
+1. När använder man add respektive commit?
+
+commit används för att lägga till filer i ditt git respositorie. add komandot använder du för att definiera vilken version av filen som ska läggas till. Du kan alltså applicera add-komandot på en fil och sedan göra ytterligare ändringar på filen utan att dessa tas med i din commit. Genom att dessa två kommandon hålls separata kan du få med många ändringar i flera filer i din commit och hålla din log tydligare.
+
+2. Vad är pull respektive push?
+
+pull använder du för att synkronisera (merge) ditt lokala git respositorie med sin remote motsvarighet på t.ex. github. Push använder du omvänt för att synkronisera det remota respositoriet med ditt lokala.
+
+3. När använder man log respektive status?
+
+git log använder du för att se tidigare commiter till respositoriet. git status använder du för att se ifall det ligger filer 'stageade' d.v.s. redo att läggas till i respositoriet med en commit, eller ifall du har filer i din katalog som ännu inte blivit stageade med add-komandot.
+
+4. Hur kan man formulera sig i sina commit-meddelanden?
+
+man bör kortfattat men ändå i största möjliga mån detaljerat återge vilka ändringar man committar. Man bör också ha i åtanke att kommandon som grep kan användas på git-loggen och därför uttrycka sig konsekvent.
+
+
